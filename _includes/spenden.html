@@ -1,0 +1,37 @@
+<!-- spenden Grid Section -->
+    <section id="spenden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Spenden</h2>
+                    <h3 class="section-subheading text-muted">Um ein Zentrum wie das LIGHTHOUSE unterhalten zu können sind viele Mittel erforderlich.<br><br>
+
+Das Lighthouse erhält Gelder vom Staat, von Geberorganisationen, Forschungseinrichtungen. All diese Gelder müssen immer wieder beantragt werden. Oftmals haben die Geber ganz spezifische Anforderungen, an das, was mit ihren Geldern gemacht werden kann und darf.
+
+Ganz schwierig ist es jedoch Geldgeber zu finden, die auch in den Erhalt oder Ausbau der Gebäude, Wartung der Fahrzeuge, sowie Verwaltungsangelegenheiten finanzieren. <br><br>
+
+Nicht  Hilfe  zur Selbsthilfe - sondern Absichern einer Einrichtung, die bereits aus Eigeninitiative entstand und heute einen wichtigen Beitrag bei der Eindämmung der HIV Epidemie in Malawi leistet.</h3>
+                </div>
+            </div>
+            <div class="row">
+            {% for post in site.pages %}
+              {% if post.type == include.type %}
+                <div class="col-md-4 col-sm-6 spenden-item">
+                    <a href="#spendenModal{{ post.modal-id }}" class="spenden-link" data-toggle="modal">
+                        <div class="spenden-hover">
+                            <div class="spenden-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/spenden-posts/{{ post.thumbnail }}" class="img-responsive" alt="">
+                    </a>
+                    <div class="spenden-caption">
+                        <h4>{{ post.title }}</h4>
+                        <p class="text-muted">{{ post.subtitle }}</p>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </section>

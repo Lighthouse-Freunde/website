@@ -1,0 +1,43 @@
+<!-- Team Section -->
+    <section id="verein" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Der Förderverein</h2>
+                    <a href="#">
+                        <img src="img/logos/header.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                    <h3 class="section-subheading text-muted">
+                      Die Gründer des Verein „Freunde des Lighthouse“ kennen die Einrichtung zumeist aus eigener Anschauung oder beruflicher Erfahrung, von Besuchen und Erzählungen - und sind alle vom Konzept und der Arbeitsweise, dem Engagement überzeugt.
+                      Wir wollen, dass sich das Lighthouse als eine eigenständige Malawische Gesundheitseinrichtung weiter entwickelt und weiterhin seine Leuchtturmfunktion erfüllt, der Leuchtturm als Symbol der Hoffnung.<br>
+
+                      </h3>
+                </div>
+            </div>
+            <div class="row">
+                {% for member in site.people %}
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
+                        <h4>{{ member.name }}</h4>
+                        <p class="text-muted">{{ member.position }}</p>
+                        <ul class="list-inline social-buttons">
+                            {% for network in member.social %}
+                            <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="#">
+                <img src="img/logos/sonne.png" class="img-responsive img-centered" alt="">
+            </a>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">“The Lighthouse exists to fight against AIDS in Malawi by providing a continuum of quality care and support, and by working to build capacity in the health sector.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
