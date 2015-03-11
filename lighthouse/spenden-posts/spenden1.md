@@ -12,6 +12,6 @@ meta: GENODED1DKD
 client: Förderverein Freunde des Lighthouse Malawi
 category: Bank für Kirche und Diakonie (KD Bank)
 type: lh-spenden
-description: Überweisen Sie Ihre Spende an die folgende Bankverbindung - vielen Dank! 
+description: Überweisen Sie Ihre Spende an die folgende Bankverbindung - vielen Dank!  
 
 ---
